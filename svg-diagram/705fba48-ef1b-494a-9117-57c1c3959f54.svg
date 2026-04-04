@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" font-family="Arial, sans-serif">
+  <defs>
+    <!-- 箭头标记定义 -->
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#4A90D9"/>
+    </marker>
+    <!-- 渐变定义 -->
+    <linearGradient id="chinaGradient" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#6BB3F0"/>
+      <stop offset="100%" stop-color="#4A90D9"/>
+    </linearGradient>
+  </defs>
+
+  <!-- 背景 -->
+  <rect width="800" height="600" fill="#FFFFFF"/>
+
+  <!-- 中心：中国地图示意（简化为轮廓） -->
+  <g id="center-china" transform="translate(400,300)">
+    <path d="M0,-30 Q20,-20 25,-5 Q30,10 20,20 Q10,30 -10,30 Q-25,25 -30,10 Q-35,-5 -20,-20 Q-10,-25 0,-30 Z" 
+          fill="url(#chinaGradient)" stroke="#4A90D9" stroke-width="2"/>
+    <text y="5" text-anchor="middle" font-size="16" fill="#FFFFFF" font-weight="bold">中国</text>
+  </g>
+
+  <!-- 辐射线：国内市场 -->
+  <g id="domestic-market">
+    <line x1="400" y1="300" x2="400" y2="120" stroke="#4A90D9" stroke-width="2.5" marker-end="url(#arrowhead)"/>
+    <g transform="translate(400,80)">
+      <circle cx="0" cy="0" r="40" fill="#E8F4FC" stroke="#6BB3F0" stroke-width="2"/>
+      <text y="-50" text-anchor="middle" font-size="16" fill="#4A90D9" font-weight="bold">国内市场</text>
+      <g transform="translate(-20,0)">
+        <rect x="-12" y="-12" width="24" height="24" rx="4" fill="#6BB3F0"/>
+        <text y="30" text-anchor="middle" font-size="14" fill="#4A90D9">900万辆</text>
+      </g>
+      <text y="50" text-anchor="middle" font-size="14" fill="#4A90D9">40%渗透率</text>
+    </g>
+  </g>
+
+  <!-- 辐射线：出口欧洲 -->
+  <g id="export-europe">
+    <line x1="400" y1="300" x2="620" y2="220" stroke="#4A90D9" stroke-width="2.5" marker-end="url(#arrowhead)"/>
+    <g transform="translate(680,180)">
+      <circle cx="0" cy="0" r="40" fill="#E8F4FC" stroke="#6BB3F0" stroke-width="2"/>
+      <text y="-50" text-anchor="middle" font-size="16" fill="#4A90D9" font-weight="bold">出口欧洲</text>
+      <!-- 德国地标简图（勃兰登堡门简化） -->
+      <g transform="translate(-25,0)">
+        <rect x="-6" y="-15" width="12" height="20" fill="#6BB3F0"/>
+        <rect x="-10" y="-20" width="20" height="5" fill="#4A90D9"/>
+      </g>
+      <!-- 挪威地标（峡湾+极简山） -->
+      <g transform="translate(25,0)">
+        <path d="M-10,10 L0,-10 L10,10 Z" fill="#6BB3F0"/>
+        <rect x="-12" y="10" width="24" height="8" fill="#4A90D9"/>
+      </g>
+      <!-- 车辆图标 -->
+      <g transform="translate(0,30)">
+        <rect x="-10" y="-5" width="20" height="8" rx="2" fill="#4A90D9"/>
+        <circle cx="-6" cy="5" r="3" fill="#6BB3F0"/>
+        <circle cx="6" cy="5" r="3" fill="#6BB3F0"/>
+      </g>
+    </g>
+  </g>
+
+  <!-- 辐射线：新兴市场 -->
+  <g id="emerging-markets">
+    <line x1="400" y1="300" x2="500" y2="460" stroke="#4A90D9" stroke-width="2.5" marker-end="url(#arrowhead)"/>
+    <g transform="translate(540,520)">
+      <circle cx="0" cy="0" r="45" fill="#E8F4FC" stroke="#6BB3F0" stroke-width="2"/>
+      <text y="-60" text-anchor="middle" font-size="16" fill="#4A90D9" font-weight="bold">新兴市场</text>
+      
+      <!-- 东南亚工厂 -->
+      <g transform="translate(-35,-15)">
+        <rect x="-8" y="-10" width="16" height="16" fill="#6BB3F0"/>
+        <rect x="-12" y="-14" width="24" height="4" fill="#4A90D9"/>
+        <rect x="-4" y="-20" width="8" height="6" fill="#4A90D9"/>
+      </g>
+      
+      <!-- 中东充电桩 -->
+      <g transform="translate(0,15)">
+        <rect x="-6" y="-12" width="12" height="20" fill="#4A90D9"/>
+        <rect x="-10" y="-16" width="20" height="4" fill="#6BB3F0"/>
+        <circle cx="0" cy="10" r="4" fill="#6BB3F0"/>
+      </g>
+      
+      <!-- 拉美物流车 -->
+      <g transform="translate(35,-15)">
+        <rect x="-12" y="-6" width="24" height="10" rx="2" fill="#4A90D9"/>
+        <rect x="-14" y="-10" width="28" height="4" fill="#6BB3F0"/>
+        <circle cx="-8" cy="6" r="3" fill="#6BB3F0"/>
+        <circle cx="8" cy="6" r="3" fill="#6BB3F0"/>
+      </g>
+    </g>
+  </g>
+
+  <!-- 双轮驱动标注（可选辅助说明） -->
+  <g id="dual-engine-label" opacity="0.8">
+    <text x="400" y="580" text-anchor="middle" font-size="14" fill="#4A90D9">双轮驱动：国内深耕 × 全球拓展</text>
+  </g>
+</svg>
